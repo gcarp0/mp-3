@@ -1,15 +1,34 @@
 import styled from "styled-components";
+//done
+const StyledMain = styled.main`
+    flex: 1;
+    padding: 30px 40px;
+    font-size: calc(0.85rem + 0.3vw);
+
+    h1, h2, h3, h4, h5, h6 {
+        margin-bottom: 1rem;
+        margin-top: 1.2rem;
+    }
+    p {
+        margin-bottom: 1.2rem;
+        line-height: 1.8;
+    }
+    @media screen and (max-width: 1000px) {
+        width: 100%;
+        padding: 20px;
+    }
+`;
 
 export default function Extra(){
     return(
-        <main>
+        <StyledMain>
             <title>My Extracurriculars</title>
             
             <h1>Extracurriculars</h1>
                 <h2>Boston University Club Squash Team</h2>
                 <h4>September 2022 - Present</h4>
                     <ul>
-                        <li> 4-year Member of the women's team, including 2025 Division B champions. </li>
+                        <li> 4-year Member of the women's team, including 2025 Division B champions and 2026 Runner-ups. </li>
                         <li> Treasurer of 30+ members, responsible for calculating dues, budgeting for tournaments, operations, team travel, and
                         planning fundraising initiatives to support club activities.</li>
                         <li>Previous 2-year Sports Information Director responsible for managing records and communications through
@@ -34,9 +53,8 @@ export default function Extra(){
                             skill-building in small group settings.</li>
                     </ul>
                 {/* insert picture */}
-        </main>
+        </StyledMain>
     );
 }  
-// need to add styling and media screens
 // add pictures
 // link to social media acc for fun?

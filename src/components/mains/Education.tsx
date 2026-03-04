@@ -1,9 +1,40 @@
 import styled from "styled-components";
-import {Link} from "react-router-dom";
+
+const StyledMain = styled.main`
+    flex: 1;
+    padding: 30px 40px;
+    font-size: calc(0.85rem + 0.3vw);
+
+    h1, h2, h3, h4, h5, h6 {
+        margin-bottom: 1.2rem;
+        margin-top: 1.2rem;
+    }
+    p {
+        margin-bottom: 1.5rem;
+        line-height: 2;
+    }
+    ul {
+        margin-left: 20px;
+        margin-bottom: 1.5rem;
+    }
+    @media screen and (max-width: 1000px) {
+        width: 100%;
+        padding: 20px;
+    }
+`;
+
+const IframeWrapper = styled.iframe`
+    width: 100%;
+    max-width: 560px;
+    height: 315px;
+    border: none;
+    margin-top: 1rem;
+    display: block;
+`;
 
 export default function Education(){
     return(
-        <main>
+        <StyledMain>
             <title>My Education</title>
 
             <h1>Education</h1>
@@ -24,8 +55,14 @@ export default function Education(){
                         <li>Auction Theory</li>
                         <li>Legal Issues of Economics</li>
                     </ul>
-        </main>
+                
+                <IframeWrapper
+                        src="https://www.youtube.com/embed/HoW3yZdJyBM?si=H_LRvpqiJenEEJCD&controls=0"
+                        title="YouTube video player"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerPolicy="strict-origin-when-cross-origin"
+                        allowFullScreen
+                />
+        </StyledMain>
     );
 }   
-// need to add styling and media screens
-// do i want to insert the video like i did for mp-1?

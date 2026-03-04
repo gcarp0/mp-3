@@ -1,8 +1,31 @@
 import styled from "styled-components";
 
+const StyledMain = styled.main`
+    flex: 1;
+    padding: 30px 40px;
+    font-size: calc(0.85rem + 0.3vw);
+
+    h1, h2, h3, h4, h5, h6 {
+        margin-bottom: 1rem;
+        margin-top: 1.2rem;
+    }
+    p {
+        margin-bottom: 1.2rem;
+        line-height: 1.8;
+    }
+    ul {
+        margin-left: 20px;
+        margin-bottom: 1.5rem;
+    }
+    @media screen and (max-width: 1000px) {
+        width: 100%;
+        padding: 20px;
+    }
+`;
+
 export default function Employment(){
     return(
-        <main>
+        <StyledMain>
             <title>My Employment</title>
             
             <h1>Employment</h1>
@@ -36,7 +59,6 @@ export default function Employment(){
                         <li>Assist the Athletics department with various operational tasks as needed, supporting smooth
                         execution of programs and events.</li>
                     </ul>
-        </main>
+        </StyledMain>
     );
 }
-// need to add styling and media screens
